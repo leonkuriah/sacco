@@ -1,0 +1,54 @@
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    h1 {
+    padding: 10px;
+    background-color: #c2c2c2;
+    color: rgb(5, 5, 5);
+    }
+    div {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    }
+    input[type=text], textarea, select {
+    font: 17px Calibri;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    input[type=number], textarea, select {
+    font: 17px Calibri;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    input[type=button]{
+    font: 17px Calibri;
+    width: auto;
+    float: right;
+    cursor: pointer;
+    padding: 7px;
+    }
+    </style>
+{% load static %}
+
+<html>
+<head>
+    <title></title>
+   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+</head>
+<body>
+    <div id="header">
+        <h1>KIDAGI SACCO SYSTEM</h1>
+    </div><!-- header -->
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div><!-- content -->
+</body>
+</html>

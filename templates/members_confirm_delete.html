@@ -1,0 +1,62 @@
+<style>
+    * {
+    box-sizing: border-box;
+    }
+    h1 {
+    padding: 10px;
+    color: rgb(76, 7, 155);
+    }
+    h2 {
+    padding: 10px;
+    background-color: #024717;
+    color: rgb(248, 242, 242);
+    }
+    div {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    }
+    input[type=text], textarea, select {
+    font: 17px Calibri;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    input[type=number], textarea, select {
+    font: 17px Calibri;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+    input[type=button]{
+    font: 17px Calibri;
+    width: auto;
+    float: right;
+    cursor: pointer;
+    padding: 7px;
+    }
+    </style>
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+<h2>Kidagi SACCO Members Deletion Page</h2>
+</div>
+<div>
+<p>
+    Welcome to the Members Deletion Page. You may return to the <a href="{% url 'list_members' %}">Members List page </a>to discard any changes
+</p>
+</div>
+<div>
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete the record for "{{ object }}" ?<br>
+    <div>
+    <input type="submit" value="Delete Member Record" />
+    </div>
+</form>
+</div>
+
+{% endblock %}
