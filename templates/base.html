@@ -1,54 +1,94 @@
-<style>
-    * {
-    box-sizing: border-box;
-    }
-    h1 {
-    padding: 10px;
-    background-color: #c2c2c2;
-    color: rgb(5, 5, 5);
-    }
-    div {
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f6f6f6;
-    overflow: hidden;
-    }
-    input[type=text], textarea, select {
-    font: 17px Calibri;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
-    input[type=number], textarea, select {
-    font: 17px Calibri;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
-    input[type=button]{
-    font: 17px Calibri;
-    width: auto;
-    float: right;
-    cursor: pointer;
-    padding: 7px;
-    }
-    </style>
-{% load static %}
-
-<html>
-<head>
-    <title></title>
-   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href= "/static/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href= "/static/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/static/assets/images/favicon.ico" type="image/x-icon" />
 </head>
+<style>
+  * {
+  box-sizing: border-box;
+  }
+  div {
+  padding: 10px;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  }
+  h1 {
+  padding: 10px;
+  background-color: #b1b0b0;
+  color: #000;
+  overflow: hidden; 
+  }
+  h2 {
+  padding: 10px;
+  background-color: #3f3e3e;
+  color: rgb(243, 241, 241);
+  overflow: hidden; 
+  }
+  input[type=text], textarea, select {
+  font: 17px Calibri;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  input[type=number], textarea, select {
+  font: 17px Calibri;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  input[type=password], textarea, select {
+  font: 17px Calibri;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  }
+  input[type=button]{
+  font: 17px Calibri;
+  width: auto;
+  float: right;
+  cursor: pointer;
+  padding: 7px;
+  }
+  </style>
 <body>
-    <div id="header">
+  <div>
+  <nav class="navbar navbar-default">
+    <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <!-- <a class="navbar-brand" href="#"><img src="/public/assets/images/olympics4.png"></a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+    <li id="home" aria-haspopup="true"><a href="/users/main">Home</a></li>
+    <li id="register" aria-haspopup="true"><a href="/users/newacc">Participation</a></li>
+    <li id="logout" aria-haspopup="true">  <a href="/">Logout </a></li>
+    </ul>
+    </div>
+    </div>
+    </nav>
         <h1>KIDAGI SACCO SYSTEM</h1>
-    </div><!-- header -->
     <div id="content">
         {% block content %}
         {% endblock %}
     </div><!-- content -->
+    <div class="container-fluid" style="font: 17px Calibri; background-color:rgb(47, 47, 48); color: rgb(249, 252, 253); text-align: center;
+    padding: 12px;">
+    <p>Grizzly Studio Labs<br>
+    All Rights Reserved (C)2020</p>
+</div>
 </body>
 </html>

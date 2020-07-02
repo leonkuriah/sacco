@@ -1,54 +1,10 @@
-<style>
-    * {
-    box-sizing: border-box;
-    }
-    h1 {
-    padding: 10px;
-    color: rgb(76, 7, 155);
-    }
-    h2 {
-    padding: 10px;
-    background-color: #024717;
-    color: rgb(248, 242, 242);
-    }
-    div {
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f6f6f6;
-    overflow: hidden;
-    }
-    input[type=text], textarea, select {
-    font: 17px Calibri;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
-    input[type=number], textarea, select {
-    font: 17px Calibri;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    }
-    input[type=button]{
-    font: 17px Calibri;
-    width: auto;
-    float: right;
-    cursor: pointer;
-    padding: 7px;
-    }
-    </style>
 {% extends "base.html" %}
 {% block content %}
-<div>
 <h2>Kidagi SACCO Members Registration Page</h2>
-</div>
 <h3><a href="{% url 'list_members' %}">Home Page</a></h3>
-
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
-<input type="submit" value="Save Member Record" />
+<input type="submit" class="btn btn-info btn-sm" value="Save Member Record" />
 </form>
 
 {% endblock %}
